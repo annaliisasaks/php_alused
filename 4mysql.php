@@ -15,8 +15,7 @@ if(!$yhendus){
 $paring = "SELECT arved.arve_nr, album.artist, album.album, klient.eesnimi, klient.perenimi
 			FROM arved
 			JOIN album ON arved.id=album.id 
-			JOIN klient ON arved.id=klient.kliendi_id"
-            ;
+			JOIN klient ON arved.id=klient.kliendi_id";
 
 $valjund = mysqli_query($yhendus, $paring);
 while($rida = mysqli_fetch_assoc($valjund)){
